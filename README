@@ -1,0 +1,49 @@
+# SauceDemo Selenium Automation
+
+#Overview
+This project is a Selenium-based test suite written in Python using the `unittest` framework. It automates the end-to-end workflow of the SauceDemo website, including login, sorting products, adding/removing items from the cart, checkout, and logout.
+
+#Technologies Used
+- Python (for scripting the automation)
+- Selenium WebDriver** (for browser automation)
+- unittest (for test case execution)
+- Chrome WebDriver(for interacting with Chrome browser)
+
+#Prerequisites
+
+Ensure you have Python installed.Install required dependencies using:
+--pip install selenium
+
+#Download ChromeDriver
+1. Check your Chrome version:
+   - Open Chrome, go to `chrome://settings/help`
+2. Download the matching version of [ChromeDriver](https://chromedriver.chromium.org/downloads)
+3. Add ChromeDriver to your system PATH or place it in the project directory.
+
+#Test Workflow
+The script performs the following steps:
+1. Login to SauceDemo** using standard credentials.
+2. Sort items by price (low to high).
+3. Add items** (`Sauce Labs Bike Light`, `Sauce Labs Backpack`, `Onesie`) to the cart.
+4. Remove an item** in the price range `$8-$10` from the cart.
+5. Proceed to checkout**, entering dummy user details.
+6. Verify successful order placement.
+7. Logout from the application.
+
+#Running the Test
+Execute the test script using:
+--python saucedemo_test.py
+
+
+If an error occurs, a screenshot will be saved as `error_screenshot.png`.
+
+#Custom Functions Used
+- `wait_and_click(by, value)`: Waits for an element to be clickable and clicks it.
+- `wait_and_send_keys(by, value, text)`: Waits for an input field and sends text.
+- `get_text(by, value)`: Retrieves the text of an element.
+
+#Error Handling & Debugging
+- Exception Handling:Captures errors and saves a screenshot for debugging.
+- Explicit Waits:Ensures elements are interactable before performing actions.
+
+
